@@ -2,25 +2,63 @@ extends ../../layouts/default.pug
 
 block main 
     section#hero 
-        h4 Lorem ipsum
         h1 Wellcome! 
-        h2 Lorem ipsum, dolor sit amet 
+        h2 Where fantasy comes to life. 
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         button Shop Now
     section#product1.section-p1
         h2 Featured Products
         p Lorem ipsum, dolor sit amet consectetur
         .pro-container 
-            .pro 
-                img(src="./images/logo.png", alt="")
-                .des
-                    span manga 
-                    h5 Naruto 
-                    .star
-                        i.fas.fa-star 
-                        i.fas.fa-star
-                        i.fas.fa-star
-                        i.fas.fa-star
-                    h4 $68
-                a(href="") 
-                    i.fa-solid.fa-cart-shopping.cart
+            each item in products
+                .pro 
+                    img(src=item.thumbnail, alt=item.thumbnail)
+                    .des
+                        span manga 
+                        h5 #{item.title} 
+                        .discount
+                            p 
+                                s $100
+                        h4 $#{item.price}
+                    a(href="") 
+                        i.fa-solid.fa-cart-shopping.cart
+
+    section#banner.section-m1
+        h4 Repair Services 
+        h2
+            | Up to 
+            span 70% 
+            | off - All Manga &amp; Special Poster
+        button.normal.button-align Explore More
+    
+    section#product1.section-p1
+        h2 New Arrivals
+        p Lorem ipsum, dolor sit amet consectetur
+        .pro-container 
+            each item in products
+                .pro 
+                    img(src=item.thumbnail, alt=item.thumbnail)
+                    .des
+                        span manga 
+                        h5 #{item.title} 
+                        .discount
+                            p 
+                                s $100
+                        h4 $#{item.price}
+                    a(href="") 
+                        i.fa-solid.fa-cart-shopping.cart
+    
+    section#sm-banner.section-p1 
+        .banner-box.banner-box1
+            h2 Manga  
+            span Containing over 5,000+ manga titles 
+            button.button-align.white Shop Now
+        .banner-box.banner-box2
+            h2 Light Novel  
+            span Check out our range of Japanese Light Novels 
+            button.button-align.white Shop Now
+    section#sm-banner2.section-banner    
+        .banner-newbox
+            h2 Figures & Collectibles
+            span Figurines, Plushies, DVDs & more... Check out our anime merch in high demand!
+            button.button-align.white Shop Now

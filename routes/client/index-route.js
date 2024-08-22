@@ -5,7 +5,6 @@ module.exports = (app) => {
     app.use("/", homeRouter);
     
     app.use("/", productsRouter);
-    app.use("/create", productsRouter);
-    
+    app.use("/create", productsRouter); 
 }
 

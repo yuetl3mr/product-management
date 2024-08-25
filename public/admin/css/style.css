@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--body-color) !important;
+}
+
+/* Sidebar  */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+}
+
+.sidebar.close {
+    width: 85px;
+}
+
+.sidebar.close img {
+    margin-left: 10px;
+}
+
+.sidebar.close .text {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar header {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.menu-bar {
+    flex-grow: 1;
+    border-top: 1px solid rgb(219, 225, 225);
+}
+
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 550;
+    transition: var(--tran-03);
+    white-space: nowrap;
+    opacity: 1;
+    color: var(--text-color);
+}
+
+.sidebar .image {
+    margin-left: 10px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    margin-left: 20px;
+    transition: var(--tran-05);
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar .image {
+    margin-right: -5px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .image-text img {
+    width: 40px;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+header .image-text .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name {
+    font-weight: 600;
+}
+
+.header-text .profession {
+    margin-top: -2px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .text,
+.sidebar li .icon {
+    color: var(--text-color);
+    min-width: 60px;
+    transition: var(--tran-03);
+}
+
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li a {
+    margin-left: -15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar.close li a {
+    height: 100%;
+    width: 115%;
+    margin-left: -22px;
+}
+
+.sidebar li a:hover {
+    background: rgb(4, 4, 4);
+}
+
+.sidebar li a .icon:hover,
+.sidebar li a .text:hover {
+    color: var(--sidebar-color);
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* End Sidebar  */
+
+/* Products */
+
+.table {
+    border: 2px solid #fff;
+}
+
+.table {
+    text-align: center;
+}
+
+td {
+    vertical-align: middle;
+}
+
+td.action button {
+    display: block;
+    margin-bottom: 5px; 
+}
+
+.card-body .col-6.form{
+    margin-left: -300px;
+} 
+
+.card-body button.btn {
+    margin-left: 5px;
+}
+
+#form-search {
+    display: flex;
+    align-items: center; 
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+}
+
+.input-group-append {
+    margin-left: 10px; 
+}
+
+.input-group .form-control {
+    flex: 1; 
+}
+
+.btn.btn-success {
+    white-space: nowrap; 
+}
+
+.card-body td a {
+    text-decoration: none;
+}
+/* End Product */
+

@@ -1,0 +1,13 @@
+mixin product-list(products)
+    each item in products
+                .pro 
+                    img(src=item.thumbnail, alt=item.thumbnail)
+                    .des
+                        span #{item.categories} 
+                        h5 #{item.title} 
+                        .discount
+                            p 
+                                s $#{item.price}
+                        h4 $#{item.newPrice}
+                    a(href="") 
+                        i.fa-solid.fa-cart-shopping.cart

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
 /* Global */
 
 button.normal {
@@ -40,6 +47,34 @@ button.white {
     position: sticky;
     top: 0;
     left: 0;
+}
+
+.box.search-box {
+    margin-left: 200px;
+    height: 40px;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid #088178;
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); */
+}
+
+
+.box.search-box input {
+    width: 300px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    background: transparent;
+}
+
+.box.search-box i{
+    margin: -10px;
+    text-decoration: none;
+    color:#088178;
 }
 
 img.logo-img {
@@ -114,10 +149,13 @@ img.logo-img {
 }
 
 #hero h1 {
+    font-size: 80px;
+    font-weight: 700;
     color: #088178;
 }
 
 #hero button {
+    margin-left : 10px;
     background: transparent url("../images/home/button.png") no-repeat;
     color: #088178;
     border: 0;
@@ -147,9 +185,13 @@ img.logo-img {
 
 #product1 .pro-container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding-top: 20px;
     flex-wrap: wrap;
+}
+
+#product1 .pro-container .pro {
+    margin-right: 25px;
 }
 
 #product1 .pro {
@@ -200,7 +242,7 @@ img.logo-img {
 #product1 .pro .des h4 {
     padding-top: 7px;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     color: #088178;
 }
 
@@ -426,3 +468,57 @@ footer .copyright {
 }
 
 /* End Footer */
+
+/* Shop Page */
+#page-header {
+    background-image: url("../images/shop-page/header.png");
+    background-position: center 17%;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#page-header h2{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+}
+#page-header p {
+    font-size: 25px;
+    color: #fff;
+}
+
+#pagination .pagination {
+    justify-content: center;
+    align-items: center !important;
+}
+
+.active>.page-link, 
+.page-link.active {
+    font-weight: 600;
+    color: #fff !important;
+    background-color: #088178 !important;
+    border-color: #39dfd3 !important;
+} 
+
+.page-link {
+    font-weight: 600;
+    color: #088178 !important;
+}
+
+/* Single Products */
+#prodetails .single-pro-img{
+    width: 40%;
+    margin-right: 50px;
+    
+}
+
+/* End Single Products */
+
+
+/* End Shop Page */

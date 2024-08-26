@@ -3,47 +3,51 @@ const { default: mongoose } = require("mongoose");
 const productSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    required: true
   },
   description: {
     type: String,
-    required: true,
+    required: true
   },
   price: {
     type: Number,
     required: true,
-    min: 0,
+    min: 0
   },
   discountPercentage: {
     type: Number,
     required: true,
     min: 0,
-    max: 100,
+    max: 100
   },
   stock: {
     type: Number,
     required: true,
-    min: 0,
+    min: 0
   },
   thumbnail: {
     type: String,
-    required: true,
+    required: true
   },
   status: {
     type: String,
     enum: ["active", "inactive"],
     default: "active",
-    required: true,
+    required: true
   },
   position: {
     type: Number,
-    required: true,
+    required: true
   },
   deleted: {
     type: Boolean,
     default: false,
-    required: true,
+    required: true
   },
+  categories :{
+    type : String,
+    required: true
+  }
 });
 
 const Product = mongoose.model("Product", productSchema, "products");

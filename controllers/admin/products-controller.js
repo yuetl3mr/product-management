@@ -51,5 +51,22 @@ module.exports.changeStatus = async (req, res) => {
   const status = req.params.status;
   const id = req.params.id;
   await Product.updateOne({ _id: id }, { status: status });
+  
+  req.flash("info", "Update Success!");
+
   res.redirect("back");
 };
+
+// [DELETE] admin/products/delete/:id
+module.exports.delete = async (req, res) => {
+    const id = req.params.id;
+    await Product.updateOne({_id : id}, {deleted: true});
+    req.flash("info", "Delete Success!");
+    res.redirect("back");
+}
+
+
+// [POST] admin/products/create
+module.exports.create = async (req, res) => {
+    res.render("admin/pages/products/create", {});
+}

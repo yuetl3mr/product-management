@@ -1,0 +1,13 @@
+extends ../../layouts/default.pug
+include ../../mixins/product-list.pug
+include ../../mixins/pagination.pug
+
+block main 
+    section#page-header 
+        h2 #Manga
+        p Up to 70% off
+
+    section#product1.section-p1
+        .pro-container 
+            +product-list(products)
+    +pagination(pagination)

@@ -1,4 +1,7 @@
-const { default: mongoose } = require("mongoose");
+const mongoose = require("mongoose");
+const slug = require("mongoose-slug-updater");
+
+mongoose.plugin(slug);
 
 const productSchema = new mongoose.Schema({
   title: {
@@ -26,7 +29,7 @@ const productSchema = new mongoose.Schema({
     min: 0
   },
   thumbnail: {
-    type: String,
+    type: [String],
     required: true
   },
   status: {
@@ -44,10 +47,19 @@ const productSchema = new mongoose.Schema({
     default: false,
     required: true
   },
-  categories :{
-    type : String,
-    required: true
+  category: {
+    type: String,
+    default:"Manga",
+    required: true,
+    unique: true
+  },
+  slug: {
+    type: String,
+    slug: "title"
   }
+}, 
+{
+  timestamps: true
 });
 
 const Product = mongoose.model("Product", productSchema, "products");

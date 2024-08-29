@@ -37,7 +37,29 @@ module.exports.index = async (req, res) => {
   });
 
   res.render("./client/pages/products/index", {
+    pageTitle: "Products",
     products: Products,
     pagination: paginationObject,
   });
 };
+
+
+module.exports.single = async (req, res) => {
+  let find = {
+    status: "active",
+    deleted: false,
+  };
+  const Products = await Product.find(find).limit(4);
+
+  Products.forEach((item) => {
+    item.newPrice = (
+      (item.price * (100 - item.discountPercentage)) /
+      100
+    ).toFixed(2);
+  });
+
+  res.render("./client/pages/products/sproduct", {
+    pageTitle: "Edit",
+    products: Products,
+  });
+}

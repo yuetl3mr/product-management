@@ -20,7 +20,7 @@ app.use(methodOverride("_method"));
 database.connect();
 
 // Pug
-app.set("views", "./views");
+app.set("views", `${__dirname}/views`);
 app.set("view engine", "pug");
 
 // application/x-www-form-urlencoded parser
@@ -34,7 +34,7 @@ app.use(flash());
 // App Locals Variables
 app.locals.prefixAdmin = sysConfig.prefixAdmin;
 
-app.use(express.static("public"));
+app.use(express.static(`${__dirname}/public`));
 
 // Routes
 route(app);

@@ -1,0 +1,73 @@
+extends ../../layouts/default.pug
+include ../../mixins/product-list.pug
+include ../../mixins/pagination.pug
+
+block main 
+    section#page-header.cart
+        h2 #Manga
+        p Up to 70% off
+    section#cart.section-p1 
+        table(width="100%")
+            thead 
+                tr 
+                    td Select 
+                    td Image 
+                    td Product 
+                    td Price
+                    td Quantity
+                    td Subtotal
+            tbody 
+                tr 
+                    td 
+                        a(href="")
+                            i.far.fa-times-circle
+                    td 
+                        img(src="/images/home/banner/banner-1.jpg", alt="")
+                        td Narutooooo Vol. 6
+                        td $199.99
+                        td 
+                            input(type="number" value=1)
+                        td $199.99
+                tr 
+                    td 
+                        a(href="")
+                            i.far.fa-times-circle
+                    td 
+                        img(src="/images/home/banner/banner-1.jpg", alt="")
+                        td Narutooooo Vol. 6
+                        td $199.99
+                        td 
+                            input(type="number" value=1)
+                        td $199.99
+                tr 
+                    td 
+                        a(href="")
+                            i.far.fa-times-circle
+                    td 
+                        img(src="/images/home/banner/banner-1.jpg", alt="")
+                        td Narutooooo Vol. 6
+                        td $199.99
+                        td 
+                            input(type="number" value=1)
+                        td $199.99
+    sectiont#cart-add.section-p1
+        div#coupon
+            h3 Apply coupon
+            div 
+                input(type="text" placeholder="Enter Your Coupon")
+                button.normal Apply
+        div#subtotal
+            h3 Cart Totals 
+            table 
+                tr 
+                    td Cart Subtotals
+                    td $337.99
+                tr 
+                    td Shipping
+                    td Free 
+                tr 
+                    td 
+                        strong Total 
+                    td 
+                        strong $377.99
+            button.normal Proceed to checkout

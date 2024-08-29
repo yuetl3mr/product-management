@@ -1,0 +1,34 @@
+extends ../../layouts/default.pug
+include ../../mixins/product-list.pug
+
+block main 
+    section#prodetails.section-p1
+        .single-pro-image
+            img(src="/images/home/banner/banner-1.jpg" width="100%" id="MainImg")
+            .small-img-group
+                .small-img-col
+                    img(src="/images/home/banner/banner-1.jpg" width="100%" class="small-img")
+                .small-img-col
+                    img(src="/images/home/banner/banner-collect.png" width="100%" class="small-img")
+                .small-img-col
+                    img(src="/images/home/banner/banner-1.jpg" width="100%" class="small-img")
+                .small-img-col
+                    img(src="/images/home/banner/banner-1.jpg" width="100%" class="small-img")
+        .single-pro-details 
+            h6 Home / Manga
+            h4 Naruto Vol. 6
+            h2 $199.00
+            input(type="number" value="1")
+            button.normal Add to cart
+            h4 Products Details
+            span Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam odit impedit, suscipit eveniet quasi quis mollitia labore et dolorum reiciendis magnam excepturi tenetur deleniti veniam vitae sequi, vero est ipsum.Iste laboriosam perferendis dolorum provident minus, excepturi quam quis beatae maxime nobis nulla accusamus voluptatem porro facilis tempora quibusdam repudiandae enim odit totam maiores magnam culpa? Quaerat hic delectus iste?Dolore quod, aperiam repudiandae autem, natus nemo ipsa voluptatem in consequuntur id sed. Cum, esse eligendi natus aut consectetur amet dolores debitis aperiam impedit molestias sit iusto illo modi dolorum!Quisquam consectetur placeat sapiente! Quis tenetur dolorum assumenda odio nihil, omnis amet, dolor est quam nam, eligendi ea eos dignissimos facilis doloremque. Nisi dignissimos repellendus voluptas, dolorem odit quidem consequuntur! 
+    section#product1.section-p1
+        h2 Related products
+        p Explore more options tailored just for you.
+        .pro-container 
+            +product-list(products)
+                   
+                
+
+                  
+                    

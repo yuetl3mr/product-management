@@ -208,6 +208,7 @@ td {
     vertical-align: middle;
 }
 
+td.action a 
 td.action button {
     display: block;
     margin-bottom: 5px;
@@ -249,14 +250,21 @@ td.action button {
 
 /* End Product */
 
+
+/* Show alert */
+.message.info {
+    position: fixed;
+    z-index: 999;
+    top: 10px;
+    right: 200px;
+    size: 100%;
+}
+
 .message.info span {
     margin-left: 88%;
     color: black;
     cursor: pointer;
 }
-
-/* Show alert */
-
 
 [show-alert].alert-hidden {
     animation-name: alert-hidden;
@@ -290,3 +298,18 @@ td.action button {
 }
 
 /* End Show alert */
+
+/* Create */
+#form-create-product .form-group,
+#form-edit-product .form-group{
+    padding-bottom: 10px;
+}
+
+#form-edit-product .form-group button,
+#form-edit-product .form-group label,
+#form-create-product .form-group button,
+#form-create-product .form-group label{
+    font-size: 20px;
+    font-weight: 600;
+}
+/* End Create */

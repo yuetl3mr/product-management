@@ -1,9 +1,9 @@
 mixin product-list(products)
     each item in products
                 .pro 
-                    img(src=item.thumbnail, alt=item.thumbnail)
+                    img(src=item.thumbnail[0], alt=item.thumbnail[0])
                     .des
-                        span #{item.categories} 
+                        span #{item.category} 
                         h5 #{item.title} 
                         .discount
                             p 

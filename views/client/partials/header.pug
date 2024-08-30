@@ -3,10 +3,10 @@ include ../mixins/submenu.pug
 header.header
   a(href='/')
     img.logo-img(src='/images/logo-2.png')
-  .box.search-box
-    input#searchInput(type="text" placeholder="Search...")
-    a(href='#' id="searchButton")
-      i.fas.fa-search
+  //- .box.search-box
+  //-   input#searchInput(type="text" placeholder="Search...")
+  //-   a(href='#' id="searchButton")
+  //-     i.fas.fa-search
   div.dropdown
     ul#navbar
       li
@@ -22,9 +22,9 @@ header.header
           ul.dropdown-menu(aria-labelledby="dropdownMenuLink")
             +sub-menu(layoutProductsCategory)
       li
-        a(href='/about') About
+        a(href='/account') Account
       li 
-        a(href='/info') Info
+        a(href='/info') Shiping
       li
         a(href='/cart')
             i.fas.fa-shopping-cart(aria-hidden='true')

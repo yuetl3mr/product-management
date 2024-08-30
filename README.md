@@ -1,5 +1,4 @@
-![Screenshot 2024-08-30 164106](https://github.com/user-attachments/assets/e22e996d-8b7b-4556-8f9c-44899da48e60)# E-commerce Website
-
+# Product Management
 This project is an E-commerce website built using Node.js, Express.js, and Pug. The website allows users to browse products, add items to their cart, and make purchases. The website's front-end is built using Pug templates and styled with CSS.
 
 ## Features

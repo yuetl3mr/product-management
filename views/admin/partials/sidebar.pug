@@ -16,13 +16,17 @@ nav.sidebar.close
                         i.fa-solid.fa-chart-line.icon
                         span.text.nav-text  Dashboard
                 li.nav-link 
-                    a(href=`${prefixAdmin}/user`) 
+                    a(href=`${prefixAdmin}/account`) 
                         i.fa-regular.fa-user.icon
                         span.text.nav-text  User
                 li.nav-link 
-                    a(href="") 
+                    a(href=`${prefixAdmin}/product-category`) 
+                        i.fa-solid.fa-table-cells-large.icon
+                        span.text.nav-text  Category
+                li.nav-link 
+                    a(href=`${prefixAdmin}/products`) 
                         i.fa-solid.fa-cart-arrow-down.icon
-                        span.text.nav-text Sometime 
+                        span.text.nav-text Products 
                 li.nav-link 
                     a(href=`${prefixAdmin}/products/create`) 
                         i.fa-solid.fa-plus.icon
@@ -30,6 +34,6 @@ nav.sidebar.close
         .bottom-content 
             ul
                 li.nav-link 
-                        a(href="") 
+                        a(href=`${prefixAdmin}/auth/logout`) 
                             i.fa-solid.fa-right-from-bracket.icon
                             span.text.nav-text  Logout

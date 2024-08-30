@@ -7,6 +7,11 @@
 
 /* Global */
 
+h5 a{
+    text-decoration: none;
+    color: #000;
+}
+
 button.normal {
     font-size: 14px;
     font-weight: 600;
@@ -71,10 +76,10 @@ button.white {
     background: transparent;
 }
 
-.box.search-box i{
+.box.search-box i {
     margin: -10px;
     text-decoration: none;
-    color:#088178;
+    color: #088178;
 }
 
 img.logo-img {
@@ -89,43 +94,39 @@ img.logo-img {
 }
 
 #navbar li {
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
+    list-style: none !important;
+    padding: 0 20px !important;
+    position: relative !important;
+}
+
+.btn-secondary {
+    background-color : transparent !important;
+    border: none !important;
+}
+
+.btn-secondary :hover{
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #088178 !important;
 }
 
 #navbar li a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    transition: 0.3s ease;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    transition: 0.3s ease !important;
 }
 
 #navbar li a:hover,
 #navbar li a.active {
-    color: #088178;
+    color: #088178 !important;
 }
 
 #navbar li a.active::after,
 #navbar li a:hover::after {
-    content: "";
-    width: 30%;
-    height: 2px;
     background: #088178;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-}
-
-/* End Header */
-
-/* Footer */
-.footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
 }
 
 /* End Footer */
@@ -155,7 +156,7 @@ img.logo-img {
 }
 
 #hero button {
-    margin-left : 10px;
+    margin-left: 10px;
     background: transparent url("../images/home/button.png") no-repeat;
     color: #088178;
     border: 0;
@@ -483,11 +484,12 @@ footer .copyright {
     padding: 14px;
 }
 
-#page-header h2{
+#page-header h2 {
     color: #fff;
     font-size: 60px;
     font-weight: 700;
 }
+
 #page-header p {
     font-size: 25px;
     color: #fff;
@@ -498,13 +500,13 @@ footer .copyright {
     align-items: center !important;
 }
 
-.active>.page-link, 
+.active>.page-link,
 .page-link.active {
     font-weight: 600;
     color: #fff !important;
     background-color: #088178 !important;
     border-color: #39dfd3 !important;
-} 
+}
 
 .page-link {
     font-weight: 600;
@@ -512,12 +514,12 @@ footer .copyright {
 }
 
 /* Single Products */
-#prodetails .single-pro-image{
+#prodetails .single-pro-image {
     width: 40%;
     margin-right: 50px;
 }
 
-#prodetails img:hover{
+#prodetails img:hover {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -532,7 +534,7 @@ footer .copyright {
     cursor: pointer;
 }
 
-#prodetails{
+#prodetails {
     display: flex;
     margin-top: 20px;
 }
@@ -577,6 +579,7 @@ footer .copyright {
 #prodetails .single-pro-details span {
     line-height: 25px;
 }
+
 /* End Shop Page */
 
 /* Cart */
@@ -607,9 +610,9 @@ footer .copyright {
     text-align: center;
 }
 
-#cart table td:nth-child(4), 
-#cart table td:nth-child(5), 
-#cart table td:nth-child(6){ 
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
     width: 150px;
     text-align: center;
 }
@@ -617,13 +620,13 @@ footer .copyright {
 #cart table td:nth-child(5) input {
     width: 70px;
     padding: 10px 5px 10px 15px;
-} 
+}
 
 #cart table thead {
     border: 1px solid #e2e9e1;
     border-left: none;
     border-right: none;
-} 
+}
 
 #cart table thead td {
     font-weight: 700;
@@ -667,27 +670,27 @@ footer .copyright {
     border: 1px solid #e2e9e1;
 }
 
-#subtotal button, 
+#subtotal button,
 #coupon button {
     background-color: #088178;
     color: #fff;
     padding: 12px 20px;
 }
 
-#subtotal{
+#subtotal {
     width: 50%;
     margin-bottom: 30px;
     border: 1px solid #e2e2e1;
     padding: 30px;
 }
 
-#subtotal table{
+#subtotal table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
 }
 
-#subtotal table td{
+#subtotal table td {
     width: 50%;
     border: 1px solid #e2e2e1;
     padding: 10px;
@@ -696,3 +699,5 @@ footer .copyright {
 
 
 /* End Cart */
+
+/* Dropmenu  */

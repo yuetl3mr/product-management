@@ -1,0 +1,54 @@
+extends ../../layouts/default.pug
+include ../../mixins/filter-status.pug
+include ../../mixins/search.pug
+include ../../mixins/pagination.pug
+include ../../mixins/alert.pug
+
+block main
+    h1 Account
+    .card.mb-3 
+        .card-header Add & Search
+        .card-body 
+            .row
+                .col-6.form.cate
+                    a(
+                      href=`${prefixAdmin}/account/create`
+                      class="btn btn-outline-success"
+                    ) + Add
+                    +search(keyword)
+    
+    
+    .card.mb-3 
+        .card-header Category List 
+            .card-body
+                table.table.table-hover.table-sm
+                    thead 
+                        tr 
+                            th No.
+                            th Name
+                            th Email
+                            th Phone
+                    tbody 
+                        each item, index in records
+                            tr
+                                td #{index + 1}
+                                td #{item.fullName}
+                                td #{item.email}
+                                td #{item.phone}
+                                td.action 
+                                    a(
+                                        href=`${prefixAdmin}/account/edit/${item.id}`
+                                        class="btn btn-warning btn-sm" 
+                                        data-id=item.id
+                                    ) Edit
+                                    button(
+                                        class="btn btn-danger btn-sm ml-1" 
+                                        button-delete 
+                                        data-id=item.id
+                                    ) Delete
+    form(
+        action=""
+        method="POST"
+        id="form-delete-item"
+        data-path=`${prefixAdmin}/account/delete/`
+    )

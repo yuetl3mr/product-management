@@ -1,6 +1,8 @@
 const systemConfig = require("../../config/system");
 
 const Product = require("../../models/product-model");
+const Category = require("../../models/productCategory-model");
+
 const filterStatusHelper = require("../../helpers/filterStatus");
 const searchHelper = require("../../helpers/search");
 
@@ -71,8 +73,14 @@ module.exports.delete = async (req, res) => {
 
 // [GET] admin/products/create
 module.exports.create = async (req, res) => {
+  const productCategory = await Category.find({
+    deleted: false,
+    parent_id: { $ne: "" }
+  });
+
   res.render("admin/pages/products/create", {
     pageTitle: "Create",
+    category: productCategory
   });
 };
 
@@ -85,9 +93,6 @@ module.exports.createPost = async (req, res) => {
     const countProduct = await Product.countDocuments();
     req.body.position = countProduct + 1;
   } else req.body.position = parseInt(req.body.position);
-
-  req.body.category = "Manga";
-
   const newProduct = new Product(req.body);
   await newProduct.save(); // Save product
 
@@ -96,6 +101,10 @@ module.exports.createPost = async (req, res) => {
 
 // [GET] admin/products/edit/:id
 module.exports.edit = async (req, res) => {
+  const productCategory = await Category.find({
+    deleted: false,
+    parent_id: { $ne: "" }
+  });
   try {
     const find = {
       deleted: false,
@@ -107,6 +116,7 @@ module.exports.edit = async (req, res) => {
     res.render("admin/pages/products/edit", {
       pageTitle: "Edit products",
       product: product,
+      category: productCategory
     });
   } catch (error) {
     req.flash("info2", "Not Found");

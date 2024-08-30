@@ -4,7 +4,8 @@ mixin product-list(products)
                     img(src=item.thumbnail[0], alt=item.thumbnail[0])
                     .des
                         span #{item.category} 
-                        h5 #{item.title} 
+                        h5 
+                            a(href=`/products/detail/${item.id}/`) #{item.title} 
                         .discount
                             p 
                                 s $#{item.price}

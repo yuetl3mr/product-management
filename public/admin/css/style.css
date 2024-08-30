@@ -5,7 +5,7 @@
 }
 
 :root {
-    --body-color: #E4E9F7;
+    --body-color: #e7e9eecf;
     --sidebar-color: #FFF;
     --primary-color: #695CFE;
     --primary-color-light: #F6F5FF;
@@ -214,6 +214,16 @@ td.action button {
     margin-bottom: 5px;
 }
 
+
+.card-body .col-6.form.cate{
+    display: flex;
+}
+.card-body .col-6.form.cate a{
+    margin-right: 20px;
+}
+
+.card-body .col-6.form.cate 
+
 .card-body .col-6.form {
     margin-left: -300px;
 }
@@ -300,11 +310,14 @@ td.action button {
 /* End Show alert */
 
 /* Create */
+#form-create-category .form-group,
 #form-create-product .form-group,
 #form-edit-product .form-group{
     padding-bottom: 10px;
 }
 
+#form-create-category .form-group button,
+#form-create-category .form-group label,
 #form-edit-product .form-group button,
 #form-edit-product .form-group label,
 #form-create-product .form-group button,

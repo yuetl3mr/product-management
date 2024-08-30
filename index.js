@@ -1,5 +1,6 @@
 require("dotenv").config();
 const flash = require("express-flash");
+const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
@@ -25,6 +26,12 @@ app.set("view engine", "pug");
 
 // application/x-www-form-urlencoded parser
 app.use(bodyParser.urlencoded({ extended: false }));
+
+//Tiny MCE
+app.use(
+  "/tinymce",
+  express.static(path.join(__dirname, "node_modules", "tinymce"))
+);
 
 // Flash
 app.use(cookieParser("ABCDF"));

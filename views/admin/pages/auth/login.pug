@@ -1,0 +1,18 @@
+extends ../../layouts/auth.pug
+
+block main
+    form(
+          action=`${prefixAdmin}/auth/login`
+          method="POST"
+        )
+        .login-box
+            .login-header
+                header Login
+            .input-box
+                input.input-field(type='email' id="email" name="email" placeholder='Email' autocomplete='off' required='')
+            .input-box
+                input.input-field(type='password' id="password" name="password" placeholder='Password' autocomplete='off' required='')
+            .input-submit
+                button.submit-btn(type="submit")
+                label(for='submit') Sign In
+    

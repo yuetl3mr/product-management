@@ -1,16 +1,26 @@
+include ../mixins/submenu.pug
+
 header.header
   a(href='/')
-    img.logo-img(src='../images/logo-2.png')
+    img.logo-img(src='/images/logo-2.png')
   .box.search-box
     input#searchInput(type="text" placeholder="Search...")
     a(href='#' id="searchButton")
       i.fas.fa-search
-  div
+  div.dropdown
     ul#navbar
       li
         a(href='/') Home
-      li
-        a(href='/products') Products
+      li(class="sub-menu")
+        a(href="/products"
+          class="btn btn-secondary dropdown-toggle" 
+          role="button" 
+          id="dropdownMenuLink" 
+          data-bs-toggle="dropdown"
+        ) Product
+        if(layoutProductsCategory)
+          ul.dropdown-menu(aria-labelledby="dropdownMenuLink")
+            +sub-menu(layoutProductsCategory)
       li
         a(href='/about') About
       li 
@@ -18,4 +28,3 @@ header.header
       li
         a(href='/cart')
             i.fas.fa-shopping-cart(aria-hidden='true')
-

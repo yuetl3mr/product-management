@@ -30,6 +30,8 @@ block main
             )
                 option(value="") -- Select --
                 if(category)
+                    each item in category 
+                        option(value=item.id) #{item.title}
 
         div(class="form-group mt-3")
             label(for="desc") Description

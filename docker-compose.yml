@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  app:
+    image: yuetl/product-management
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

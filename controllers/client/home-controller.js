@@ -1,18 +1,24 @@
 const Product = require("../../models/product-model");
-
+const Category = require("../../models/productCategory-model");
+const treeHelper = require("../../helpers/createTree");
+const productHelper = require("../../helpers/product");
 module.exports.index = async (req, res) => {
-    const Products = await Product.find({
+    const productCategory = await Category.find({
+        deleted: false
+    });
+
+    const newProductCategory = treeHelper(productCategory);
+    var Products = await Product.find({
         status : "active", 
         deleted : false
     }).limit(8);
 
-    Products.forEach(item => {
-        item.newPrice = (item.price * (100 -item.discountPercentage) / 100).toFixed(2);
-    });
+    Products = productHelper.priceNewProducts(Products);
 
     res.render("./client/pages/home/index", {
         pageTitle: "Home",
-        products : Products   
+        products : Products,
+        layoutProductsCategory : newProductCategory
     });
 
 }

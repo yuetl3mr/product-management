@@ -42,6 +42,7 @@ button.white {
 
 /* Header */
 .header {
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -9,8 +9,7 @@ This project is an E-commerce website built using Node.js, Express.js, and Pug. 
 - **Shopping Cart**: Add products to your cart, update quantities, and proceed to checkout.
 - **Order Management**: Users can view their order history and track current orders.
 - **Admin Panel**: Admins can manage products, categories, and view sales analytics.
-- **Responsive Design**: Optimized for both desktop and mobile viewing.
-
+- **Live chat**: Chatting & create rooms chat with other users.
 ## Tech Stack
 
 - **Backend**: Node.js, Express.js

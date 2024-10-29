@@ -18,6 +18,19 @@ This project is an E-commerce website built using Node.js, Express.js, and Pug. 
 - **Templating Engine**: Pug
 - **Session Management**: express-session
 
+## Some Demo
+### Client
+![Screenshot 2024-08-30 163307](https://github.com/user-attachments/assets/63548b67-0dcc-4bf2-b149-4a8483802de8)
+![Screenshot 2024-08-30 163732](https://github.com/user-attachments/assets/b350d44b-6715-4467-8443-e91fa9db5a0a)
+![Screenshot 2024-08-30 163851](https://github.com/user-attachments/assets/db13a9ab-aa24-478e-9402-cde69b3403f2)
+![Screenshot 2024-08-30 164106](https://github.com/user-attachments/assets/c7ef7b71-f15a-4e95-babe-e66f0cab8b41)
+![Screenshot 2024-08-30 164123](https://github.com/user-attachments/assets/33a8c4a7-6757-495a-b957-3c9aa2b739f1)
+![Screenshot 2024-08-30 164534](https://github.com/user-attachments/assets/210e083b-3601-4949-9b22-9d76716fda2d)
+### Admin
+![Screenshot 2024-08-30 164142](https://github.com/user-attachments/assets/eca89aeb-b3d1-4849-8524-03eee1bbde7b)
+![Screenshot 2024-08-30 164159](https://github.com/user-attachments/assets/bd827b6b-6684-4d76-93cc-3fd7872f0c02)
+![Screenshot 2024-08-30 164212](https://github.com/user-attachments/assets/9445cd55-eed4-46b3-ba9b-8244308f0ca9)
+
 ## Installation
 
 ### Prerequisites
@@ -91,19 +104,6 @@ Once the application is running, you can access it by navigating to `http://loca
 ### Customer Support
 
 - **Live Chat**: Use the live chat feature to get assistance from customer support representatives.
-
-## Some Demo
-### Client
-![Screenshot 2024-08-30 163307](https://github.com/user-attachments/assets/63548b67-0dcc-4bf2-b149-4a8483802de8)
-![Screenshot 2024-08-30 163732](https://github.com/user-attachments/assets/b350d44b-6715-4467-8443-e91fa9db5a0a)
-![Screenshot 2024-08-30 163851](https://github.com/user-attachments/assets/db13a9ab-aa24-478e-9402-cde69b3403f2)
-![Screenshot 2024-08-30 164106](https://github.com/user-attachments/assets/c7ef7b71-f15a-4e95-babe-e66f0cab8b41)
-![Screenshot 2024-08-30 164123](https://github.com/user-attachments/assets/33a8c4a7-6757-495a-b957-3c9aa2b739f1)
-![Screenshot 2024-08-30 164534](https://github.com/user-attachments/assets/210e083b-3601-4949-9b22-9d76716fda2d)
-### Admin
-![Screenshot 2024-08-30 164142](https://github.com/user-attachments/assets/eca89aeb-b3d1-4849-8524-03eee1bbde7b)
-![Screenshot 2024-08-30 164159](https://github.com/user-attachments/assets/bd827b6b-6684-4d76-93cc-3fd7872f0c02)
-![Screenshot 2024-08-30 164212](https://github.com/user-attachments/assets/9445cd55-eed4-46b3-ba9b-8244308f0ca9)
 
 ## Contributing
 We welcome contributions to improve this project. To contribute:
